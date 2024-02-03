@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://codehelp-weather-app.netlify.app/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="https://codehelp-weather-app.netlify.app/assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./Weather App_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./Weather App_files/styles.css">
+  <title>Weather App | CodeHelp</title>
+</head>
+
+<body>
+  <h1>Weather App</h1>
+  <div class="tab-container">
+    <p class="tab current-tab" data-userweather="">Your Weather</p>
+    <p class="tab" data-searchweather="">Search Weather</p>
+  </div>
+  <!-- Container -->
+  <div class="weather-container">
+    <!-- grant location access -->
+    <div class="sub-container grant-location-container active">
+      <img src="./Weather App_files/location.png" width="80" height="80" loading="lazy">
+      <p>Grant Location Access</p>
+      <p data-messagetext="">Allow Access To Get Weather Information</p>
+      <button class="btn" data-grantaccess="">Grant Access</button>
+    </div>
+    <!-- search country form -->
+    <form class="form-container" data-searchform="">
+      <input placeholder="Search for city ..." data-searchinp="">
+      <button class="btn" type="submit">
+        <img src="./Weather App_files/search.png" width="20" height="20" loading="lazy">
+      </button>
+    </form>
+    <!-- loading screen container -->
+    <div class="sub-container loading-container">
+      <img src="./Weather App_files/loading.gif" width="150" height="150">
+      <p>Loading</p>
+    </div>
+    <!-- show weather info -->
+    <div class="sub-container user-info-container">
+      <div class="name">
+        <p data-cityname=""></p>
+        <img crossorigin="anonymous" data-countryicon="">
+      </div>
+      <p data-weatherdesc=""></p>
+      <img data-weathericon="">
+      <p data-temp=""></p>
+      <div class="parameter-container">
+        <div class="parameter">
+          <img src="./Weather App_files/wind.png">
+          <p class="parameter-title">windspeed</p>
+          <p class="parameter-value" data-windspeed=""></p>
+        </div>
+        <div class="parameter">
+          <img src="./Weather App_files/humidity.png">
+          <p class="parameter-title">humidity</p>
+          <p class="parameter-value" data-humidity=""></p>
+        </div>
+        <div class="parameter">
+          <img src="./Weather App_files/cloud.png">
+          <p class="parameter-title">clouds</p>
+          <p class="parameter-value" data-cloudiness=""></p>
+        </div>
+      </div>
+    </div>
+    <!-- handle api fetch error -->
+    <div class="sub-container api-error-container">
+      <img src="./Weather App_files/not-found.png" data-notfoundimg="">
+      <p data-apierrortext=""></p>
+      <button class="btn" data-apierrorbtn="">Retry</button>
+    </div>
+  </div>
+  <script src="./Weather App_files/index.js.download"></script>
+
+
+</body></html>
